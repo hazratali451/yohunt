@@ -1,0 +1,41 @@
+
+
+.navBarTop{
+    padding-top: 20px;
+    transition: all .3s linear;
+    .nav-link{
+        text-transform: uppercase;
+    }
+    .offcanvas-body{
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .offcanvas{
+        background-color: black;
+    }
+}
+
+.navScroll{
+    padding-top: 10px;
+    background-color: black;
+}
+
+.modal{
+    
+}
+.modal-backdrop{
+    z-index: 11 !important;
+}
+
+@media (max-width: 991.98px){
+    .navBarTop {
+        padding-top: 5px;
+        .navbar-brand{
+            img{
+                height: 50px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,93 @@
+.weapons-area {
+   
+    
+}
+
+.weapons-slid {
+    margin-top: 70px;
+    padding-bottom: 120px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(180deg, rgba(173, 26, 175, 0.2) 0%, #AD1AAF 5.6%, #AD1AAF 53.59%, #AD1AAF 85.88%, rgba(173, 26, 175, 0.2) 100%);
+    }
+    .weapons-item {
+        text-align: center;
+        padding: 0 30px;
+
+        .icon {
+            border: 4px solid #AD1AAF;
+            backdrop-filter: blur(9px);
+            width: 120px;
+            height: 120px;
+            border-radius: 100px;
+            margin: 0 auto;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {}
+
+        .h5 {
+            color: white;
+            text-transform: uppercase;
+            padding: 30px 0 10px;
+        }
+
+        ul {
+            display: grid;
+            gap: 10px;
+            li {
+                text-align: left;
+                color: white;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                list-style: disc;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+.weapons-slid{
+    .slick-prev, .slick-next{
+        top: auto;
+        bottom: -100px;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        backdrop-filter: blur(20px);
+        border-radius: 100px;
+        padding-bottom: 10px;
+        &::before{
+            filter: invert(42%) sepia(97%) saturate(2792%) hue-rotate(287deg) brightness(90%) contrast(100%);
+
+        }
+    }
+    .slick-prev {
+        left: 30%;
+        &::before{
+            content: url('../../images/prev-btn.png');
+        }
+    }
+    .slick-next {
+        right: 30%;
+        &::before{
+            content: url('../../images/next-btn.png');
+        }
+    }
+    .slick-prev.slick-disabled:before, .slick-next.slick-disabled:before {
+        opacity: 1;
+        filter: invert(25%) sepia(0%) saturate(7484%) hue-rotate(157deg) brightness(107%) contrast(104%);
+    }
+     
+}
+

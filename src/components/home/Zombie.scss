@@ -1,0 +1,145 @@
+.zombie-area {
+    padding: 120px 0;
+    position: relative;
+    z-index: 11;
+}
+
+.zombie-image-item {
+    background: linear-gradient(160.61deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 101.7%);
+    border-width: 2.5px 0px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(35.83px);
+    border-radius: 41.6667px;
+    max-width: 321px;
+    padding: 20px 15px;
+    text-align: center;
+    margin-left: 170px;
+
+    &:nth-child(1) {
+        z-index: 2;
+        position: relative;
+    }
+
+    &:nth-child(2) {
+        z-index: 1;
+        position: relative;
+    }
+
+    &:nth-child(even) {
+        margin: -190px 0;
+    }
+}
+
+.zombie-slid {
+    margin-top: 70px;
+
+    .zombie-item {
+        padding-bottom: 50px;
+    }
+
+    p {
+        color: white;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 1.9;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 40px; 
+
+        &::before {
+            content: url('../../images/dashed.png');
+            position: absolute;
+            top: 10px; 
+            left: 0;
+        }
+    }
+
+    .slick-dots {
+        display: grid !important;
+        top: 0;
+        right: -50px;
+        background: linear-gradient(180deg, #ffffff33 0%, rgba(217, 217, 217, 0.212) 100%);
+        width: 2px;
+        height: 110%;
+
+        li {
+            margin: 0;
+        }
+
+        .slick-active {
+            background: #AD1AAF;
+            width: 4px;
+            left: -1px;
+            height: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+.zombie-shape {
+    .shape1 {
+        position: absolute;
+        width: 480px;
+        height: 467px;
+        background: #AD1AAF;
+        opacity: 0.75;
+        filter: blur(259px);
+        top: 0%;
+        left: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .zombie-slid {
+        .slick-dots {
+            left: 0;
+            top: auto;
+            width: 100%;
+            height: 2px;
+            bottom: -90px;
+            display: flex !important;
+
+            li {
+                width: 100% !important;
+            }
+        }
+
+        .zombie-item {
+            padding-bottom: 30px;
+        }
+    }
+
+    .zombie-image-item {
+        margin: 0 auto;
+    }
+
+    .zombie-image-item:nth-child(even) {
+        margin: -190px auto;
+        z-index: 11;
+    }
+
+    .zombie-image {
+        margin-bottom: 90px;
+    }
+
+    .zombie-shape {
+        display: block !important;
+
+        .shape1 {
+            top: 4%;
+            left: -173px;
+            filter: blur(200px);
+            transform: rotate(41.17deg);
+        }
+
+        .shape2 {
+            position: absolute;
+            width: 823px;
+            height: 1931px;
+            background: #8C30F5;
+            opacity: 0.3;
+            filter: blur(200px);
+        }
+    }
+}
